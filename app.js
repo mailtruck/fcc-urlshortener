@@ -70,7 +70,7 @@ app.get('/new/*', function(req, res, next) {
       }
     });
   }
-  else res.send('(⊃｡•́‿•̀｡)⊃━☆ﾟ.*･｡ﾟ Invalid URL ( ✖ _ ✖ ) make sure to include the http://');
+  else res.json({"error":"(⊃｡•́‿•̀｡)⊃━☆ﾟ.*･｡ﾟ Invalid URL ( ✖ _ ✖ ) make sure to include the http://'"});
 
   // collection.find({},{},function(e, docs){
   //

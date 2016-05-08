@@ -2,4 +2,45 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to my url shortener microservice api.
+
+  p I hope you enjoy using it. 😃
+
+
+  h2 Create short url:
+
+  h3 Example input:
+
+  pre
+    code https://bcd-fcc-urls.herokuapp.com/new/https://www.google.com
+  pre
+    code https://bcd-fcc-urls.herokuapp.com/new/http://foo.com:80
+
+
+  h3 Example output:
+
+  pre
+    code {"original_url":"https://www.google.com","short_url":"https://bcd-fcc-urls.herokuapp.com/BkfiV4p-"}
+
+  h2 Short URL Use:
+
+  pre
+    code https://bcd-fcc-urls.herokuapp.com/BkfiV4p-
+
+  h3 Redirects to:
+
+  pre
+    code https://www.google.com/
+
+
+  h2 User Stories:
+
+  blockquote
+    ol
+      li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+
+      li If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+
+      li When I visit that shortened URL, it will redirect me to my original link.
+
+  a(href="http://twitter.com/briandanowski") Brian Danowski
