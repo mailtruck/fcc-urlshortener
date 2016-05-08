@@ -9,8 +9,7 @@ var mongo = require('mongodb');
 var monk = require('monk');
 
 
-var mongoUri = process.env.MONGOLAB_URI ||
-  process.env.MONGOHQ_URL || 'mongodb://localhost:27017/nodetest1';
+var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/nodetest1';
 var db = monk(mongoUri);
 
 var shortid = require('shortid');
